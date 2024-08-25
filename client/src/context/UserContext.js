@@ -14,7 +14,7 @@ export const UserProvider = ({ children }) => {
           const storedToken = localStorage.getItem("token");
         if (storedToken) {
           const response = await axios.get(
-            "https://alma-movie-fullstack.onrender.com/api/auth/me",
+            "https://alma-movie-fullstack-backend.onrender.com/api/auth/me",
             {
               headers: {
                 Authorization: `Bearer ${storedToken}`,

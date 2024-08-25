@@ -18,7 +18,7 @@ function BookmarksPage() {
     const fetchBookmarks = async () => {
       try {
         const response = await axios.get(
-          "https://alma-movie-fullstack.onrender.com/api/bookmarks",
+          "https://alma-movie-fullstack-backend.onrender.com/api/bookmarks",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -65,7 +65,7 @@ function BookmarksPage() {
   const handleDeleteBookmark = async (type, id) => {
     try {
       await axios.delete(
-        `https://alma-movie-fullstack.onrender.com/api/bookmarks/${type}/${id}`,
+        `https://alma-movie-fullstack-backend.onrender.com/api/bookmarks/${type}/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
