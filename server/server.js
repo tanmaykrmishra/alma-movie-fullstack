@@ -13,7 +13,7 @@ const app = express();
 // Configure CORS
 app.use(
   cors({
-    origin: "http://localhost:3000", // Replace with your frontend URL
+    origin: "https://tanmay-almabetter-movie-database.netlify.app/", // Replace with your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"], // Allow specific HTTP methods
     credentials: true, // Allow cookies to be sent
     allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
