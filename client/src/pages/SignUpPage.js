@@ -15,7 +15,7 @@ function SignUpPage() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://alma-movie-fullstack-backend.onrender.com/api/auth/register",
+        "https://alma-movie-fullstack.onrender.com/api/auth/register",
         {
           email,
           password,

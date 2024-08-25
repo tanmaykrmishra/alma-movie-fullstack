@@ -14,7 +14,7 @@ function SignInPage() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://alma-movie-fullstack-backend.onrender.com/api/auth/login",
+        "https://alma-movie-fullstack.onrender.com/api/auth/login",
         {
           email,
           password,

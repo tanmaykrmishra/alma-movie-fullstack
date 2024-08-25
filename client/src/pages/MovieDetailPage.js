@@ -32,7 +32,7 @@ function MovieDetailPage() {
     }
     try {
       await axios.post(
-        "https://alma-movie-fullstack-backend.onrender.com/api/bookmarks",
+        "https://alma-movie-fullstack.onrender.com/api/bookmarks",
         { movieId: id },
         {
           headers: {
