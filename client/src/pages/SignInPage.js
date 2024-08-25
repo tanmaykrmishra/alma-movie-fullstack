@@ -13,10 +13,14 @@ function SignInPage() {
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/api/auth/login", {
-        email,
-        password,
-      });
+      const response = await axios.post(
+        "https://alma-movie-fullstack-backend.onrender.com/api/auth/login",
+        {
+          email,
+          password,
+        }
+      );
+      console.log(response);
       const { user, token } = response.data;
       login(user, token); // Use login function from context
       navigate("/");

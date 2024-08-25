@@ -13,11 +13,14 @@ export const UserProvider = ({ children }) => {
       try {
           const storedToken = localStorage.getItem("token");
         if (storedToken) {
-          const response = await axios.get("/api/auth/me", {
-            headers: {
-              Authorization: `Bearer ${storedToken}`,
-            },
-          });
+          const response = await axios.get(
+            "https://alma-movie-fullstack-backend.onrender.com/api/auth/me",
+            {
+              headers: {
+                Authorization: `Bearer ${storedToken}`,
+              },
+            }
+          );
           setUser(response.data.user);
           setToken(storedToken); // Store token in state
         }

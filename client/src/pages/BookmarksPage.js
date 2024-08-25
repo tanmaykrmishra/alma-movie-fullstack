@@ -17,11 +17,14 @@ function BookmarksPage() {
 
     const fetchBookmarks = async () => {
       try {
-        const response = await axios.get("/api/bookmarks", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await axios.get(
+          "https://alma-movie-fullstack-backend.onrender.com/api/bookmarks",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         // Extract the IDs from the response
         const movieIds = response.data.movieBookmarks;
@@ -61,11 +64,14 @@ function BookmarksPage() {
   // Handle delete bookmark
   const handleDeleteBookmark = async (type, id) => {
     try {
-      await axios.delete(`/api/bookmarks/${type}/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      await axios.delete(
+        `https://alma-movie-fullstack-backend.onrender.com/api/bookmarks/${type}/${id}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       // Remove the item from the state
       if (type === "movie") {

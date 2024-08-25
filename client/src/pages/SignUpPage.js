@@ -14,11 +14,14 @@ function SignUpPage() {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/api/auth/register", {
-        email,
-        password,
-        name,
-      });
+      const response = await axios.post(
+        "https://alma-movie-fullstack-backend.onrender.com/api/auth/register",
+        {
+          email,
+          password,
+          name,
+        }
+      );
       const { user, token } = response.data;
       login(user, token); // Use login function from context
       navigate("/");
