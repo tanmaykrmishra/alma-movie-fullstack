@@ -13,7 +13,7 @@ const app = express();
 // Configure CORS
 app.use(
   cors({
-    origin: "https://alma-movie-fullstack.vercel.app/", // Replace with your frontend URL
+    origin: "https://alma-movie-fullstack.vercel.app", // Replace with your frontend URL
     methods: ["GET", "POST", "PUT", "DELETE"], // Allow specific HTTP methods
     credentials: true, // Allow cookies to be sent
     allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
